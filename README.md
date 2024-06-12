@@ -1,5 +1,6 @@
 # UserScripts
 s1vお手製のUserScriptを置いておく場所です。
+問題などあればIssueを上げていただけますと対応するかもしれません。
 
 # 一覧
 ## KoT
