@@ -3,6 +3,9 @@ s1vお手製のUserScriptを置いておく場所です。
 
 問題などあればIssueを上げていただけますと対応するかもしれません。
 
+# 利用方法
+TampermonkeyなどのUserScriptを管理するブラウザ拡張機能を導入し、一覧のタイトルをクリックするとインストールできます。
+
 # 一覧
 ## KoT
 ### [AddSurplusTime](https://github.com/s1v/UserScripts/raw/main/KoT/AddSurplusTime.user.js)
