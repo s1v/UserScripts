@@ -34,9 +34,7 @@
     tableHeadRow.appendChild(additionalHeadColumn);
 
     const additionalBodyColumn = document.createElement('td');
-    const additionalBodyItem = document.createElement('p');
     const bodyTextNode = document.createTextNode(`${bonusTime}分`);
-    additionalBodyItem.appendChild(bodyTextNode);
-    additionalBodyColumn.appendChild(additionalBodyItem);
+    additionalBodyColumn.appendChild(bodyTextNode);
     tableBodyRow.appendChild(additionalBodyColumn);
 })();
