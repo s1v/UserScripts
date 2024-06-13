@@ -6,6 +6,8 @@ s1vお手製のUserScriptを置いておく場所です。
 # 利用方法
 TampermonkeyなどのUserScriptを管理するブラウザ拡張機能を導入し、一覧のタイトルをクリックするとインストールできます。
 
+うまくインストールできない場合は[拡張機能の管理](chrome://extensions/)画面右上の`デベロッパー モード`を有効にしてみてください。
+
 # 一覧
 ## KoT
 ### [AddSurplusTime](https://github.com/s1v/UserScripts/raw/main/KoT/AddSurplusTime.user.js)
