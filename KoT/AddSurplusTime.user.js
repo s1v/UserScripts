@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KoT-AddSurplusTime
 // @namespace    https://github.com/s1v/UserScripts
-// @version      2024-06-13
+// @version      2024-06-19
 // @description  KoTのタイムカードに現在の余剰労働時間を追加表示します（1日の標準労働時間を8時間とする）
 // @author       s1v
 // @match        https://s2.ta.kingoftime.jp/admin/*/working/*
@@ -12,14 +12,17 @@
 (function() {
     'use strict';
 
-    const workCount = Number(document.getElementsByClassName('work_count').item(1).innerText); //労働日数
+    const workDataTable = document.evaluate('/html/body/div/div[2]/div/div[6]/div[1]/table/tbody', document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0);
+    const workTimes = Array.from(workDataTable.querySelectorAll('.custom1'));
+
+    const workDays = workTimes.filter(child => Number(child.textContent)).length; //労働日数
     const kotWorkedTime = document.getElementsByClassName('specific-table_800').item('table').children[1].children[0].children[1].innerText; //労働時間(KoT形式)
 
     /*労働時間(KoT形式)を労働時間(min)に変換*/
     const part = kotWorkedTime.toString().split('.');
     const workedTime = (Number(part[0]) * 60) + (Number(part[1])); //労働時間(min)
 
-    const standardWorkTime = workCount * 8 * 60; //労働日数*時間*分 = 標準労働時間(min)
+    const standardWorkTime = workDays * 8 * 60; //労働日数*時間*分 = 標準労働時間(min)
 
     const bonusTime = workedTime - standardWorkTime; //貯金時間(min)
 
