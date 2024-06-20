@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         KoT-AddSurplusTime
-// @namespace    https://github.com/s1v/UserScripts
+// @namespace    https://github.com/s1v/UserScripts/raw/main/KoT/AddSurplusTime.user.js
 // @version      2024-06-19
 // @description  KoTのタイムカードに現在の余剰労働時間を追加表示します（1日の標準労働時間を8時間とする）
 // @author       s1v
